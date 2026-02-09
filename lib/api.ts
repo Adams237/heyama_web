@@ -3,6 +3,7 @@ import axios from 'axios';
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://51.75.123.172:5005';
 
+
 export interface ObjectData {
     _id?: string;
     title: string;
