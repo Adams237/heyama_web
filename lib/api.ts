@@ -26,7 +26,13 @@ export const objectsApi = {
                 title,
                 description,
                 imageBase64,
-            });
+            },
+                {
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                }
+            );
             return response.data;
         } catch (error) {
             console.log(error)
