@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://51.75.123.172:5005';
+// const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://51.75.123.172:5005';
 
 
 export interface ObjectData {
@@ -12,12 +12,12 @@ export interface ObjectData {
     createdAt?: Date;
 }
 
-const api = axios.create({
-    baseURL: API_BASE_URL,
-    headers: {
-        'Content-Type': 'application/json',
-    },
-});
+// const api = axios.create({
+//     baseURL: API_BASE_URL,
+//     headers: {
+//         'Content-Type': 'application/json',
+//     },
+// });
 
 export const objectsApi = {
     create: async (title: string, description: string, imageBase64: string) => {
