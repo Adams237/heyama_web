@@ -22,7 +22,7 @@ const api = axios.create({
 export const objectsApi = {
     create: async (title: string, description: string, imageBase64: string) => {
         try {
-            const response = await api.post('/objects', {
+            const response = await axios.post('/api/objects', {
                 title,
                 description,
                 imageBase64,
@@ -35,16 +35,16 @@ export const objectsApi = {
     },
 
     getAll: async (): Promise<ObjectData[]> => {
-        const response = await api.get('/objects');
+        const response = await axios.get('/api/objects');
         return response.data;
     },
 
     getOne: async (id: string): Promise<ObjectData> => {
-        const response = await api.get(`/objects/${id}`);
+        const response = await axios.get(`/api/objects/${id}`);
         return response.data;
     },
 
     delete: async (id: string): Promise<void> => {
-        await api.delete(`/objects/${id}`);
+        await axios.delete(`/api/objects/${id}`);
     },
 };
